@@ -2145,8 +2145,8 @@
         // 其中res表示匹配成功的字符串序列，$1，表示第一个（）内所匹配的内容，$2为第二个，依次类推。当我们使用全局匹配时，只要匹配成功的子串最后都会执行一遍function函数
         search.replace(reg, function(res, $1, $2){
             // name=zhangsan,age=18,sex=male
-            console.log(res, $1, $2);
-            obj[$1] = $2;
+            // console.log(res, $1, $2);
+            obj[$1] = decodeURIComponent($2);
         });
         return obj;
     }
