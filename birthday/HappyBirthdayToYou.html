@@ -2135,7 +2135,7 @@
 
     function getQueryObject(url){
         // 参数校验
-        url = url === null ? window.location.href : url;
+        url = url ? url : window.location.href;
         var search = url.substring(url.lastIndexOf('?') + 1);
         // 开始进行字符串解析name=zhangsan&age=18&sex=25
         // +代表匹配一个或多个，零个肯定是不行的。*代表0个或多个，这里value没有是允许的。那么这里要注意的就是^在单独使用时，代表以什么开头，在中括号里面使用代表不包含的意思
